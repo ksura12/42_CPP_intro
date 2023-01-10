@@ -6,7 +6,7 @@
 #    By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 09:24:12 by ksura             #+#    #+#              #
-#    Updated: 2023/01/10 12:26:03 by ksura            ###   ########.fr        #
+#    Updated: 2023/01/10 15:11:32 by ksura            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ HEADER = ./header
 SRCDIR = src/
 OBJDIR = build/
 
-SRC := PhoneBook.cpp
+SRC := phonebook.cpp PhoneBook.class.cpp Contact.class.cpp
 
 GREEN = \033[0;32m
 RED = \033[0;31m
