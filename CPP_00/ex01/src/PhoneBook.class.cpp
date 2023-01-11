@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/10 17:59:23 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/11 11:29:26 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,16 @@ std::string	PhoneBook::format_contact(std::string str)
 	i2 = 9;
 	if (i > 9)
 	{
-		detail = str.substr(0,10);
-		detail[9] = '.';
+		detail = str.substr(0,9);
+		detail.append(".");
 	}
-	else if (i <= 10)
+	else if (i < 10)
 	{
 		detail = str;
 		while (i2 < 10)
 		{
-			detail.append(" ");
-			i2 = detail.length() - 1;
+			detail.insert(0, " ");
+			i2 = detail.length();
 		}
 	}
 	return (detail);
@@ -57,7 +57,7 @@ void	PhoneBook::search(int list)
 	s_first_name = format_contact(contactlist[list].get_contactdetails(1));
 	s_last_name = format_contact(contactlist[list].get_contactdetails(2));
 	s_nickname = format_contact(contactlist[list].get_contactdetails(3));
-	std::cout << "     " << list + 1 << "    " << "|" << s_first_name << "|" << s_last_name << "|" << s_nickname << std::endl;
+	std::cout << "         " << list + 1 << "|" << s_first_name << "|" << s_last_name << "|" << s_nickname << std::endl;
 }
 
 void	PhoneBook::all_details(int i)

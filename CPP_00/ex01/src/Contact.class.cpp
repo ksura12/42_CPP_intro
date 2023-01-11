@@ -6,12 +6,17 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/10 18:16:29 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/11 11:43:25 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../header/Contact.class.hpp"
+
+Contact::Contact(void)
+{
+	return;
+}
 
 int is_ascii(std::string str)
 {
@@ -27,11 +32,12 @@ int is_ascii(std::string str)
 	return 0;
 }
 
-void Contact::enter_first_name()
+void Contact::enter_first_name(void)
 {
-	while(20)
+	while(1)
 	{
 		std::cout <<"Please enter your First Name" << std::endl;
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		getline(std::cin, first_name);
 		if (first_name.length() > 0)
 		{
@@ -122,8 +128,8 @@ void Contact::enter_secret()
 	return ;
 }
 
-void	Contact::set_contactdetails(void){
-
+void	Contact::set_contactdetails(void)
+{
 	enter_first_name();
 	enter_last_name();
 	enter_nickname();
@@ -135,7 +141,7 @@ void	Contact::set_contactdetails(void){
 std::string	Contact::get_contactdetails(int i)
 {
 	std::string detail;
-	
+
 	if (i == 1)
 		detail = first_name;
 	if (i == 2)
@@ -149,12 +155,9 @@ std::string	Contact::get_contactdetails(int i)
 	return (detail);
 }
 
-Contact::Contact(void) {
 
-	return;
-}
 
-Contact::~Contact(void) {
-	
+Contact::~Contact(void)
+{
 	return;
 }

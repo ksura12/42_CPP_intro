@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/10 18:03:46 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/11 11:42:32 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,11 @@ int	main()
 {
 	PhoneBook	pbook;
 	std::string	command;
+	std::string	input;
 	int			contact_number;
 	int			i;
 	int			list;
 	int			inumber;
-	// int			index;
-	std::string	input;
 
 	command = "START";
 	i = 0;
@@ -60,8 +59,8 @@ int	main()
 		std::cin >> command;
 		if (!command.compare("ADD"))
 		{
-			contact_number = pbook.addcontact(i);
-			if (i > 8)
+			i = pbook.addcontact(i);
+			if (i > 7)
 			{
 				i = 0;
 				contact_number = 8;
@@ -74,11 +73,13 @@ int	main()
 			else
 			{
 				list = 0;
+				inumber = 0;
 				while (list < contact_number || list < i)
 				{
 					pbook.search(list);
 					list++;
 				}
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				while (inumber > list || inumber < 1)
 				{
 					std::cout << "Please Enter the Index Number: " << std::endl;
@@ -87,10 +88,10 @@ int	main()
 						inumber = stoi(input);
 				}
 				pbook.all_details(inumber -1);
+				list = 0;
+				inumber = 0;
 			}
 		}
-		// check_input(command);
 	}
-	
 	return 0;
 }
