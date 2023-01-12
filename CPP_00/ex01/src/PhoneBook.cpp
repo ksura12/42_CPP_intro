@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
+/*   By: ksura@student.42wolfsburg.de <ksura@studen +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/12 10:49:00 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/12 10:59:47 by ksura@student.42 ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	main()
 					std::cout << "Please Enter the Index Number: " << std::endl;
 					getline(std::cin, input);
 					if (!check_input(input, i, contact_number))
-						inumber = stoi(input);
+						std::istringstream ( input ) >> inumber;
 				}
 				pbook.all_details(inumber -1);
 				list = 0;

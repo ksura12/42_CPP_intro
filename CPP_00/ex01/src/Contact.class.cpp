@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
+/*   By: ksura@student.42wolfsburg.de <ksura@studen +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/12 10:42:00 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/12 11:01:47 by ksura@student.42 ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int is_ascii(std::string str)
 	i = 0;
 	while (str[i])
 	{
-		if ((int)str[i] > 0 && (int)str[i] <= 127)
+		if ((int)str[i] > 0)
 			return 1;
 		i++;
 	}

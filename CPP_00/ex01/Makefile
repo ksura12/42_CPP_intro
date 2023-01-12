@@ -3,12 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+         #
+#    By: ksura@student.42wolfsburg.de <ksura@studen +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 09:24:12 by ksura             #+#    #+#              #
-#    Updated: 2023/01/10 15:11:32 by ksura            ###   ########.fr        #
+#    Updated: 2023/01/11 17:30:21 by ksura@student.42 ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+
 
 NAME := phonebook
 CC = c++
@@ -17,7 +19,7 @@ HEADER = ./header
 SRCDIR = src/
 OBJDIR = build/
 
-SRC := phonebook.cpp PhoneBook.class.cpp Contact.class.cpp
+SRC := PhoneBook.cpp PhoneBook.class.cpp Contact.class.cpp
 
 GREEN = \033[0;32m
 RED = \033[0;31m
