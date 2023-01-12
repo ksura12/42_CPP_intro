@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:28:30 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/12 15:08:59 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/12 18:44:41 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ Weapon::Weapon(std::string type)
 
 Weapon::~Weapon(void)
 {
-	std::cout << "Weappn was destroyed" << std::endl;
+	std::cout << "Weapon was destroyed" << std::endl;
 	return;
 }

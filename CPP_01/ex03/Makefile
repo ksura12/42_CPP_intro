@@ -6,7 +6,7 @@
 #    By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 09:24:12 by ksura             #+#    #+#              #
-#    Updated: 2023/01/12 14:22:52 by ksura            ###   ########.fr        #
+#    Updated: 2023/01/12 18:41:55 by ksura            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ HEADER = ./header
 SRCDIR = src/
 OBJDIR = build/
 
-SRC := main.cpp
+SRC := main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 GREEN = \033[0;32m
 RED = \033[0;31m
