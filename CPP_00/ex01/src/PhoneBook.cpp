@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/11 11:42:32 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/12 10:49:00 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int check_input(std::string str, int i, int contact_number)
 	}
 	else
 	{
-		i2 = stoi(str);
+		std::istringstream ( str ) >> i2;
 		if (i2 > i || str[0] < '1')
 			return (1);
 		else
@@ -56,7 +56,7 @@ int	main()
 	while (command.compare("EXIT"))
 	{
 		std::cout << "To Add new Contact enter \"ADD\".\nTo Search for a Contact enter \"SEARCH\".\nTo Exit the Phonebook enter \"EXIT\"" << std::endl;
-		std::cin >> command;
+		getline(std::cin, command);
 		if (!command.compare("ADD"))
 		{
 			i = pbook.addcontact(i);
@@ -79,7 +79,6 @@ int	main()
 					pbook.search(list);
 					list++;
 				}
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				while (inumber > list || inumber < 1)
 				{
 					std::cout << "Please Enter the Index Number: " << std::endl;

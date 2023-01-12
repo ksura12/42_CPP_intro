@@ -6,11 +6,12 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/11 11:44:54 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/12 10:49:06 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
+#include <sstream>
 
 #ifndef PHONEBOOK_CLASS_H
 # define PHONEBOOK_CLASS_H

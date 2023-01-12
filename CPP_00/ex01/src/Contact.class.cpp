@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/11 11:43:25 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/12 10:42:00 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void Contact::enter_first_name(void)
 	while(1)
 	{
 		std::cout <<"Please enter your First Name" << std::endl;
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		getline(std::cin, first_name);
 		if (first_name.length() > 0)
 		{
@@ -47,7 +46,7 @@ void Contact::enter_first_name(void)
 				std::cout << "Please Use Ascii Characters only" << std::endl;
 		}
 		else
-			std::cout << "Please insert your First Name" << std::endl;
+			std::cout << "No input" << std::endl;
 	}
 	return ;
 }
@@ -66,7 +65,7 @@ void Contact::enter_last_name()
 				std::cout << "Please Use Ascii Characters only" << std::endl;
 		}
 		else
-			std::cout << "Please insert your Last Name" << std::endl;
+			std::cout << "No input" << std::endl;
 	}
 	return ;
 }
@@ -85,7 +84,7 @@ void Contact::enter_nickname()
 				std::cout << "Please Use Ascii Characters only" << std::endl;
 		}
 		else
-			std::cout << "Please insert your Nickname" << std::endl;
+			std::cout << "No input" << std::endl;
 	}
 	return ;
 }
@@ -104,7 +103,7 @@ void Contact::enter_phone()
 				std::cout << "Please Use Ascii Characters only" << std::endl;
 		}
 		else
-			std::cout << "Please insert your Phone number" << std::endl;
+			std::cout << "No input" << std::endl;
 	}
 	return ;
 }
@@ -123,7 +122,7 @@ void Contact::enter_secret()
 				std::cout << "Please Use Ascii Characters only" << std::endl;
 		}
 		else
-			std::cout << "Please insert your darkest secret" << std::endl;
+			std::cout << "No input" << std::endl;
 	}
 	return ;
 }
