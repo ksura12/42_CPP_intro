@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:28:30 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/12 16:29:08 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/13 10:35:44 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	HumanA::attack()
 {
-	std::cout << _name << " attacks with their " << _weapon.getType() << std::endl;
+	std::cout << this->_name << " attacks with their " << this->_weapon.getType() << std::endl;
 }
 
 

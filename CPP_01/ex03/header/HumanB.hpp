@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/12 18:52:06 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/13 10:34:50 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class	HumanB
 		Weapon		*_weapon;
 
 	public:
-		void	attack(void);
-		void	setWeapon(Weapon & weapon);
+
 		HumanB(std::string name);
-		// HumanB(std::string name, Weapon * weapon);
+		void	setWeapon(Weapon & weapon);
+		void	attack(void);
 		~HumanB(void);
 };
 

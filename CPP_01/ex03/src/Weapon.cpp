@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:28:30 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/12 18:44:41 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/13 10:38:44 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 const std::string&	Weapon::getType()
 {
-	const std::string& REF = this->type;
-	return (REF);
+	return (this->type);
 }
 
 void	Weapon::setType(std::string type)
@@ -26,7 +25,7 @@ void	Weapon::setType(std::string type)
 
 Weapon::Weapon(std::string type)
 {
-	setType(type);
+	this->type = type;
 	return;
 }
 
