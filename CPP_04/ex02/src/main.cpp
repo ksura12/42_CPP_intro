@@ -6,11 +6,11 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 12:33:16 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/17 17:12:36 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/17 17:13:25 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/Animal.hpp"
+#include "../header/AAnimal.hpp"
 #include "../header/Cat.hpp"
 #include "../header/Dog.hpp"
 #include "../header/WrongAnimal.hpp"
@@ -22,22 +22,24 @@ int main( void )
 {
 	std::cout << "--------------------ex01 - making array----------------------" << std::endl;
 	unsigned int array_size = 10;
-	Animal *	shelter[array_size];
+	AAnimal *	shelter[array_size];
 	
 	for (unsigned int i = 0; i < array_size / 2; i++)
 	{
 		shelter[i] = new Dog();
 		shelter[i + (array_size / 2)] = new Cat();
 	}
-
+	
 	std::cout << std::endl;
 	std::cout << "-------ex01 - making an animal-------" << std::endl;
 	std::cout << std::endl;
 
-	Animal * animal = new Animal;
-	std::cout << "Hey, I am a " << animal->getType() << std::endl;
-	animal->makeSound();
-	delete animal;
+	// Animal * animal = new Animal;
+	// std::cout << "Hey, I am a " << animal->getType() << std::endl;
+	// animal->makeSound();
+	// delete animal;
+	
+	// its not working, because its an abstract class now
 
 	std::cout << std::endl;
 	std::cout << "-------ex01 - testing dogs and brains-------" << std::endl;
@@ -90,6 +92,5 @@ int main( void )
 	{
 		delete shelter[i];
 	}
-	
 	return 0;
 }
