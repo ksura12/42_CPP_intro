@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 12:50:56 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/17 18:38:03 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/18 11:20:19 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,14 @@ AMateria & AMateria::operator=(AMateria const & input)
 	std::cout << "AMateria-Assignment operator called" << std::endl;
 	this->_type = input._type;
 	return (*this);
+}
+
+std::string const &	AMateria::getType(void) const
+{
+	return (this->_type);
+}
+
+void	AMateria::use(ICharacter& target)
+{
+	(void) target;
 }

@@ -6,7 +6,7 @@
 #    By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 09:24:12 by ksura             #+#    #+#              #
-#    Updated: 2023/01/17 19:14:42 by ksura            ###   ########.fr        #
+#    Updated: 2023/01/18 10:36:00 by ksura            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ HEADER = ./header
 SRCDIR = src/
 OBJDIR = build/
 
-SRC := main.cpp AMateria.cpp Ice.cpp Cure.cpp
+SRC := main.cpp AMateria.cpp Ice.cpp Cure.cpp MateriaSource.cpp Character.cpp
 
 GREEN = \033[0;32m
 RED = \033[0;31m

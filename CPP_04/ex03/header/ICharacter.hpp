@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 18:12:35 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/17 18:14:01 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/18 11:14:40 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "AMateria.hpp"
 #include <iostream>
+
+class AMateria;
 
 class ICharacter
 {
