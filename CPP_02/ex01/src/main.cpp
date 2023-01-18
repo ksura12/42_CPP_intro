@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 12:33:16 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/16 11:12:44 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:51:38 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Fixed a;
 Fixed const b( 10 );
 Fixed const c( 42.42f );
 Fixed const d( b );
+
 a = Fixed( 1234.4321f );
 std::cout << "a is " << a << std::endl;
 std::cout << "b is " << b << std::endl;

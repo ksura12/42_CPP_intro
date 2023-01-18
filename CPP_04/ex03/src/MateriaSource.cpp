@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 12:50:56 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/18 10:34:55 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/18 12:58:46 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,13 @@ void	MateriaSource::learnMateria(AMateria * m)
 			this->_slot[i] = m;
 			m = NULL;
 			break;
+			std::cout << "MateriaSource learned " << m->getType()
+				<< std::endl;
 		}
 		if (m != NULL)
 		{
 			std::cout << "MateriaSource tried to learn " << m->getType()
-				<<"btu slots are full" << std::endl;
+				<<" but slots are full" << std::endl;
 			delete m;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 12:50:56 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/17 20:39:38 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/18 12:24:05 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	Character::equip(AMateria * m)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_slot[i] != NULL)
+		if (this->_slot[i] == NULL)
 		{
 			this->_slot[i] = m;
 			std::cout << this->_name << " equipped " << m->getType() << std::endl;
