@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 17:26:52 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/19 10:18:51 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/19 13:49:27 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,7 @@ void	invaliddecrement1(void);
 
 void	test_decrement(void)
 {
-	printing("====INCREMENTS====");
+	printing("====DECREMENTS====");
 	printing("______BUREAUCRAT CREATION________");
 	Bureaucrat	*person1 = new Bureaucrat("person1", 29);
 	std::cout << person1 << std::endl;

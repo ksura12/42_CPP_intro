@@ -1,47 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/19 11:51:58 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/19 14:30:46 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_CLASS_HPP
-# define BUREAUCRAT_CLASS_HPP
+#ifndef FORM_CLASS_HPP
+# define FORM_CLASS_HPP
 
 #include <iostream>
 #include "colors.h"
+#include "Bureaucrat.hpp"
 
-class	Bureaucrat
+class Bureaucrat;
+
+class	Form
 {
 	private:
-		std::string const	_name;
-		int					_grade;
+		const std::string 	_name;
+		bool				_sig;
+		int			_grade_s;
+		int			_grade_e;
 
 		static int const	_maxgrade = 1;
 		static int const	_mingrade = 150;
 
 	public:
-		Bureaucrat(std::string const & name, int grade);
-		Bureaucrat(Bureaucrat const & input);
-		Bureaucrat & operator=(Bureaucrat const & input);
-		~Bureaucrat(void);
+		Form(std::string const & name, const int grade_s, const int grade_e);
+		Form(Form const & input);
+		Form & operator=(Form const & input);
+		~Form(void);
 
-		std::string const &	getName(void) const;
-		int			getGrade(void) const;
-		void				incrementGrade();
-		void				decrementGrade();
+		const std::string &	getName(void) const;
+		bool				getSig(void) const;
+		int			getGrade_s(void) const;
+		int			getGrade_e(void) const;
+
+		void				beSigned(Bureaucrat & name);
+		void				beSigned(Bureaucrat * name);
 
 		class GradeTooHighExeption : public std::exception
 		{
 			public:
 				virtual const char * what() const throw()
 				{
-					return ("Bureacrat::GradeTooHighExeption");
+					return ("Form::GradeTooHighExeption");
 				}
 		};
 
@@ -50,12 +58,21 @@ class	Bureaucrat
 			public:
 				virtual const char * what() const throw()
 				{
-					return ("Bureacrat::GradeTooLowExeption");
+					return ("Form::GradeTooLowExeption");
+				}
+		};
+		
+		class AlreadySignedExeption : public std::exception
+		{
+			public:
+				virtual const char * what() const throw()
+				{
+					return ("Form::AlreadySignedExeption");
 				}
 		};
 };
 
-std::ostream & operator<<(std::ostream & o, Bureaucrat const * input);
-std::ostream & operator<<(std::ostream & o, Bureaucrat const & input);
+std::ostream & operator<<(std::ostream & o, Form const * input);
+std::ostream & operator<<(std::ostream & o, Form const & input);
 
 #endif

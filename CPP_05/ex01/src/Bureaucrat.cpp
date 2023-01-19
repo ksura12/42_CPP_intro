@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:58:37 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/19 11:59:19 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/19 13:42:14 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,21 @@ void				Bureaucrat::incrementGrade()
 void				Bureaucrat::decrementGrade()
 {
 	if (DEBUG)
-		std::cout << YELLOW << "[Bereaucrat] decrement grade called" 
+		std::cout << YELLOW << "[Bureaucrat] decrement grade called" 
 			<< COLOR_DEFAULT << std::endl;
 	if (this->_grade == this->_mingrade)
 		throw GradeTooLowExeption();
 	this->_grade++;
+}
+
+void				Bureaucrat::signForm(Form & form)
+{
+	form.beSigned(*this);
+}
+
+void				Bureaucrat::signForm(Form * form)
+{
+	form->beSigned(this);
 }
 
 std::ostream & operator<<(std::ostream & o, Bureaucrat const * input)
