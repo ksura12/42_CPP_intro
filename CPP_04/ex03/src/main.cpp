@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 12:33:16 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/18 13:06:07 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/24 09:13:44 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main( void )
 	me->use(0, *bob);
 	// me->use(1, *bob);
 	delete bob;
-	// delete me;
-	// delete src;
+	delete me;
+	delete src;
 	return 0;
 }
