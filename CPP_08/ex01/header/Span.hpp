@@ -6,13 +6,13 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 10:35:57 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/26 17:31:08 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/27 11:42:47 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef SPAN_CLASS_HPP
- #define EASYFIND_CLASS_HPP
+ #define SPAN_CLASS_HPP
  
 # include <vector>
 # include <iostream>
