@@ -6,11 +6,11 @@
 #    By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 09:24:12 by ksura             #+#    #+#              #
-#    Updated: 2023/01/26 16:31:46 by ksura            ###   ########.fr        #
+#    Updated: 2023/01/26 17:08:16 by ksura            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := identify
+NAME := span
 CC = c++
 CFLAGS := -Wall -Werror -Wextra -std=c++98 -D DEBUG=0
 DFLAGS := -Wall -Werror -Wextra -std=c++98 -g  -D DEBUG=1
@@ -18,7 +18,7 @@ HEADER = ./header
 SRCDIR = src/
 OBJDIR = build/
 
-SRC := main.cpp Base.cpp
+SRC := main.cpp Span.cpp
 
 GREEN = \033[0;32m
 RED = \033[0;31m

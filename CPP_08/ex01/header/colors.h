@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 10:57:55 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/26 19:42:05 by ksura            ###   ########.fr       */
+/*   Created: 2023/01/10 10:50:29 by ksura             #+#    #+#             */
+/*   Updated: 2023/01/17 19:12:19 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
- #define ITER_HPP
- #include<cstddef>
- #include <iostream>
- 
-template<typename T>
-void	iter(T * array, size_t size, void (*f)( const T &arg))
-{
-	if (!array)
-		return ;
-	for (size_t i = 0; i < size; i++)
-	{
-		f(array[i]);
-	}
-};
-
-template<typename T>
-void	increment(T & a)
-{
-	a++;
-};
-
-template<typename T>
-void	printing(T & a)
-{
-	std::cout << "[" << a << "] ";
-};
-
+#ifndef COLORS_H
+# define COLORS_H
+# define GREEN "\033[0;32m"
+# define RED "\033[0;31m"
+# define COLOR_DEFAULT "\033[0m"
+# define YELLOW "\033[33m"
+# define BLUE "\033[34m"
+# define MAGENTA "\033[35m"
+# define WHITE "\033[37m"
 #endif

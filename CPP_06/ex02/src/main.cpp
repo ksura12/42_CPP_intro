@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 16:45:49 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/24 17:28:29 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/26 16:34:09 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ Base * generate()
 
 void identify(Base * p)
 {
-	if (dynamic_cast<A*>(p) != nullptr)
+	if (dynamic_cast<A*>(p) != 0)
 		std::cout << MAGENTA << "The class type is A" << COLOR_DEFAULT << std::endl;
-	else if (dynamic_cast<B*>(p) != nullptr)
+	else if (dynamic_cast<B*>(p) != 0)
 		std::cout << BLUE << "The class type is B" << COLOR_DEFAULT << std::endl;
-	else if (dynamic_cast<C*>(p) != nullptr)
+	else if (dynamic_cast<C*>(p) != 0)
 		std::cout << YELLOW << "The class type is C" << COLOR_DEFAULT << std::endl;
 }
 
