@@ -6,7 +6,7 @@
 #    By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 09:24:12 by ksura             #+#    #+#              #
-#    Updated: 2023/01/27 12:13:05 by ksura            ###   ########.fr        #
+#    Updated: 2023/01/30 16:24:29 by ksura            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEADER = ./header
 SRCDIR = src/
 OBJDIR = build/
 
-SRC := main.cpp
+SRC := main.cppmake
 
 GREEN = \033[0;32m
 RED = \033[0;31m

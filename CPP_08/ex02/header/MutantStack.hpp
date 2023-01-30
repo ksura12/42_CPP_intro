@@ -6,7 +6,7 @@
 /*   By: ksura <ksura@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 10:35:57 by ksura             #+#    #+#             */
-/*   Updated: 2023/01/27 12:13:50 by ksura            ###   ########.fr       */
+/*   Updated: 2023/01/30 15:12:44 by ksura            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	MutantStack : public std::stack<T>
 	public:
 		MutantStack(void){};
 		MutantStack(MutantStack const & input){ *this = input;};
-		virtual ~MutantStack(void);
+		virtual ~MutantStack(void) {};
 
 		MutantStack & operator=(MutantStack const & input)
 		{
